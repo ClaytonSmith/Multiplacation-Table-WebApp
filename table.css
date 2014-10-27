@@ -1,0 +1,130 @@
+/*
+ * File: table.css
+ * Programmer: Clayton Smith, Clayton_smith@student.uml.edu
+ * Assignment: 6
+ * 	Copyright (c) 2014 by Clayton K. Smith.
+ *	  All rights reserved. May be freely copied or excerpted for any purpouse with
+ *	  credit to the author.
+ *	
+ *	Creation Date: 10/18/2014 (MM/DD/YYYY)
+ */
+
+/* Not used in page. Nice colors to remember.*/
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+
+
+/* The table controles are the X and Y input boxes at the top of the page.*/
+#tableControl
+{
+    margin: 15px 15px 15px 15px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#tableControl form{
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1em;
+     color: #fff;
+     background-color: #036;
+     text-align: left;
+ }
+
+
+ #tableControl form h1
+ {
+     font-weight: normal;
+     font-size: 2em;
+     padding: 15px 0  10px  0;
+
+ }
+
+ #tableControl form input[type=submit] {
+     margin: 15px 0  10px  37%;
+     text-align: center;
+ }
+ /* Used and being used for testing. */
+ .container form{
+     margin: 10px 10px 10px 10px; 
+     padding: 15px 15px 15px 15px;
+
+ }
+
+
+ /* Table */
+ #myTable th h1 {
+
+     font-weight: bold;
+     font-size: 2em;
+    text-align: left;
+    color: #FFF842;
+}
+
+#myTable td {
+    font-weight: normal;
+    font-size: 2em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+#myTable {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+    text-align: center;
+}
+
+#myTable td, #myTable th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+#myTable tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+#myTable tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+#myTable th {
+      background-color: #1F2739;
+}
+
+/* colors first row */
+#myTable td:first-child { color: #FB667A; }
+
+#myTable tr:hover {
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+/* Yellow, popout hover effect. */
+#myTable td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+    #myTable td:nth-child(4),
+    #myTable th:nth-child(4) { display: none; }
+}
