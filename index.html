@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- 
+	File: assignment6.html
+	91.461 Assignment: 6
+	Clayton K. Smith, UMass Lowell Computer Science, Clayton_Smith@student.uml.edu
+	Copyright (c) 2014 by Clayton K. Smith.
+	All rights reserved. May be freely copied or excerpted for any purpouse with
+	credit to the author.
+	
+	Creation Date: 10/18/2014 (MM/DD/YYYY)
+	
+	Modification History:
+	-->
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <!-- linking jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="timesTable.js"></script>    
+    <title>Clayton Smith</title>
+  </head>
+  
+  
+  <body>
+    <!-- background -->
+    <div class="bg"></div>
+    <header>
+      <!-- site navigation --> 
+      <nav id="navagation" class="site-navigation">
+	<ul class="menu">
+	  <li class="menu-item"><a href="weblab.cs.uml.edu/~csmith1/index.html">Home</a></li>
+	  <li class="menu-item"><a href="#">Assignments </a>
+	    <!-- dropdown menu -->	
+	    <ul class="dropdown">
+	      <!-- links to assignments -->
+	      <li class="menu-item"><a href="weblab.cs.uml.edu/~csmith1/assignments/assignment2.html">Assignment 2</a></li>
+	      <li class="menu-item"><a href="weblab.cs.uml.edu/~csmith1/assignments/assignment3.html">Assignment 3</a></li>
+	      <li class="menu-item"><a href="http://claytonsmith.github.io/website/">Assignment 4</a></li>
+	      <li class="menu-item"><a href="weblab.cs.uml.edu/~csmith1/assignments/assignment5.html">Assignment 5</a></li>
+	      <li class="menu-item"><a href="weblab.cs.uml.edu/~csmith1/assignments/assignment6.html">Assignment 6</a></li>
+	    </ul>
+	  </li>
+	  <li class="menu-item"><a href="/~csmith1/coming_soon.html">About</a></li>
+	  <li class="menu-item"><a href="/~csmith1/coming_soon.html">Contact</a></li>
+	</ul>
+      </nav> 
+    </header>
+    
+    <!-- Controls for the table generation function -->
+    <div id="tableControl">
+      <form id="control" action="javascript:void(0)">
+	<!-- X input -->
+	<h1>X</h1>
+	Min: <input type="number" value="1" id="minX" name="minX" min="-50" max="100"> 
+	Max: <input type="number" value="5" id="maxX" name="maxX" min="-50" max="100">
+	<hr>
+	<!-- Y input -->
+	<h1>Y</h1>
+	Min: <input type="number" value="1" id="minY" name="minY" min="-50" max="100"> 
+	Max: <input type="number" value="5" id="maxY" name="maxY" min="-50" max="100">
+	<hr>
+	<input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="container">
+      <!--Empty table that will be filled in by updateTable -->
+      <table id="myTable">
+      </table>
+    </div>
+    
+    <footer></footer>
+  </body>
+</html> 
+
+
