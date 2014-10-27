@@ -1,0 +1,198 @@
+/*
+* File: global.css
+* Programmer: Clayton Smith, Clayton_smith@student.uml.edu
+* Assignment: 3
+* 	Copyright (c) 2014 by Clayton K. Smith.
+*	  All rights reserved. May be freely copied or excerpted for any purpouse with
+*	  credit to the author.
+*	
+*	Creation Date: 09/10/2014 (MM/DD/YYYY)
+*/
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://fonts.googleapis.com/css?family=Gruppo:400");
+
+/*css reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Sets the background up to be used with parallax scrolling */
+.bg {
+    
+    /* background: url("http://img.wallpaperstock.net:81/black-minimalistic-geometry-wallpapers_36259_640x960.jpg") repeat; /* testing */
+    /* background: url("/~csmith1/css/website-wallpaper.png") repeat; /* first image used */
+    /*background: url("http://www.maxistentialism.com/bees/oprahbees.gif") repeat; /*this is just for fun */
+    background: #171717 ;
+    position: fixed;
+    width: 100%;
+    height: 600%;
+    top: 0;
+    left:0;
+    z-index: -1;
+}
+
+/* Background for Monty Python theme*/
+.hhgbg {
+    background: url("/~csmith1/css/monty_python_monster.png") repeat; /* first image used */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 120% ;
+    top: 0;
+    left:0;
+    z-index: -1;
+ }
+ 
+/* Define look of nav bar */
+.site-navigation{
+    background: #2f2f2f;
+    display: block;
+    height: 50px;    
+    font-family: gruppo, "Open Sans", sans-serif;
+    text-align: center;
+}
+
+/* uls will cvontain the dropdown parts of the nav bar */
+.site-navigation ul{
+    background: #2f2f2f;
+    list-style: none;
+    padding: 10px;
+}
+
+
+/* li is used as a container for the nav bar. It holds the links*/
+.site-navigation li{
+    /* display: inline-block; dont use this,  */
+    display: inline-block;
+    padding: 0 30px ;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Define looks of the links inside the li container. */
+.site-navigation li a {
+    color: rgba(255, 127, 100, 1);
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 2em;
+    font-weight:200;
+
+}
+
+
+/* Defines what happens when hovering over a nav link */
+.site-navigation li:hover {
+    background: #484848;
+    cursor: pointer;
+   /* Css validator does not like the following...
+   @include transition(background, 0.5s); */
+}
+
+/* Container for the dropdown list. */
+.site-navigation ul li ul{
+    background: #484848;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    /* min-width: 200px;*/
+    margin-top: 10px;
+    visibility: hidden;
+    /* was using...    
+     max-width: relative; 
+    */
+}
+
+/* Animation for dropdown menu. shows the dropdown menu*/
+.site-navigation ul li:hover > ul, .site-navigation ul li ul:hover{
+    transition: visibility .5s ease-in;  
+    visibility: visible;
+}
+
+/* Makes sure that the spacing of the elements is the same*/
+.site-navigation ul li ul li{
+    padding: 10px 0;     
+}
+
+/* Define looks of the links inside the li container. */
+.site-navigation ul li ul li a {
+    color: rgba(255, 127, 100, 1);
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Hover effect for the dropown menu */
+.site-navigation ul li ul li:hover{
+    background: #6d6d6d;
+}
+
+/* Work in progress*/
+/* Creates a dark area to display text in*/
+.blog {
+    /*    float: center; */
+    margin: 100px auto;
+    width: 800px;
+    background: rgba(31,31,31, .2);
+    padding: 20px 40px 20px 40px;
+    border-top:1px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+   font-family: gruppo, "Open Sans";
+}
+
+.blog h1{
+    font-size: 24pt;
+    margin: 10px auto 30px auto;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    color: rgba(255, 127, 100, 1); 
+    background: rgba(31,31,31, .5);
+}
+
+.blog h2{
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 5px auto 1px auto;
+    color: #dfa900; 
+}
+
+/* Blog text*/
+/* This is somehow affecting the nav bar. Need to fix*/
+.blog p{
+    text-align: left;
+    font-family: gruppo, "Open Sans";
+    color: white;
+    line-height: 18px;
+    font-size: 1.2em;
+    font-weight:100;
+    padding: 5px 40px 30px 40px;
+}
+
+.blog p i  {
+    font-style: italic;
+}
+/*The coming_soon page using this to add a "coming soon" banner */
+.ComingSoon {
+    margin: 80px auto;
+    text-align: center;
+    font-family: "Open Sans";
+    border-radius: 15px;
+    background: #2f2f2f;
+    font-size: 27px;
+    text-transform:uppercase;
+    color: rgba(255, 127, 100, 1);
+    padding: 0;
+    width: 100%;
+}
